@@ -6,8 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
     <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Open your console :)</h1>
+    <h1>Man vs Computer</h1>
+    <div class="gamePlay">
+        <div class="choices">
+            <div class="left">
+                <p>Me</p>
+                <span class="userChoice"></span>
+                <span class="userScore">2</span>
+            </div>
+            <div class="right">
+                <p>Computer</p>
+                <span class="computerChoice"></span>
+                <span class="computerScore">1</span>
+            </div>
+        </div>
+        <div id="scoreInfo">You've won</div>
+        <p>Please select your choice</p>
+        <div class="buttons">
+            <button class="btn btn-square" id="rockBtn">
+              <div class="sign">✊🏿</div>
+            </button>
+            <button class="btn btn-square" id="paperBtn">
+              <div class="sign">✋🏽</div>
+            </button>
+            <button class="btn btn-square" id="scissorsBtn">
+              <div class="sign">✌🏾</div>
+            </button>
+          </div>
+        
+
+    </div>
 </body>
 </html>
