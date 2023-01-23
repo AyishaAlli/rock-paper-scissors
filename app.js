@@ -1,22 +1,24 @@
 const rockBtn = document.getElementById("rockBtn");
 const paperBtn = document.getElementById("paperBtn");
 const scissorsBtn = document.getElementById("scissorsBtn");
+
 const userChoice = document.getElementsByClassName("userChoice");
 const computerChoice = document.getElementsByClassName("computerChoice");
+
 const userScore = document.getElementsByClassName("userScore");
 const computerScore = document.getElementsByClassName("computerScore");
 const scoreInfo = document.getElementById("scoreInfo");
+
+//scores
+let player = 0;
+let computer = 0;
+let winner = "";
 
 
 function getComputerChoice() {
   const options = ["rock", "paper", "scissors"];
   return options[Math.floor(options.length * Math.random())];
 }
-
-//console.log(getComputerChoice());
-let player = 0;
-let computer = 0;
-let winner = "";
 
 function playRound(playerSelection, computerSelection) {
   userScore.innerHTML = scores[player];
@@ -47,31 +49,31 @@ function playRound(playerSelection, computerSelection) {
 }
 
 function isGameOver() {
-  return player === 3 || computer === 3;
+  return player === 5 || computer === 5;
 }
 
 function updateChoice(playerSelection, computerSelection) {
   switch (playerSelection) {
     case "rock":
-      playerSign.textContent = "✊🏿";
+      playerChoice.textContent = "✊🏿";
       break;
     case "paper":
-      playerSign.textContent = "✋🏽";
+      playerChoice.textContent = "✋🏽";
       break;
     case "scissors":
-      playerSign.textContent = "✌🏾";
+      playerChoice.textContent = "✌🏾";
       break;
   }
 
   switch (computerSelection) {
     case "rock":
-      computerSign.textContent = "✊🏿";
+      computerChoice.textContent = "✊🏿";
       break;
     case "paper":
-      computerSign.textContent = "✋🏽";
+      computerChoice.textContent = "✋🏽";
       break;
     case "scissors":
-      computerSign.textContent = "✌🏾";
+      computerChoice.textContent = "✌🏾";
       break;
   }
 }
@@ -96,7 +98,7 @@ function handleClick(playerSelection) {
   updateChoice(playerChoice, computerChoice);
 }
 
-// rockBtn.addEventListener("click", () => handleClick("rock"));
+//rockBtn.addEventListener("click", () => handleClick("rock"));
 // paperBtn.addEventListener("click", () => handleClick("paper"));
 // scissorsBtn.addEventListener("click", () => handleClick("scissors"));
 
