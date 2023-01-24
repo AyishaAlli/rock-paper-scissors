@@ -1,0 +1,34 @@
+body {
+  text-align: center;
+  font-family: sans-serif;
+  width: 75%;
+  margin: auto;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 3px solid black;
+  height: 350px;
+  width: 50%;
+  margin: 10px;
+  padding: 10px;
+}
+#userChoice,
+#computerChoice {
+font-size: 140px;
+}
+
+.buttons .btn{
+    background-color: transparent;
+    border: none;
+    font-size: 100px;
+}
